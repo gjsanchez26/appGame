@@ -14,56 +14,31 @@ export class AboutPage {
   constructor(public navCtrl: NavController,  public http: Http) {
 
   }
-  
- pressedA():void{
-    console.log("A");
-    this.response = this.http.get('http://google.com');
-    //console.log(this.response);
+
+ select():void{
+    console.log("Select");
+    this.response = this.http.get(this.URL+"SELECT");
     this.response
     .map(res => res.json())
     .subscribe(data => {
       console.log('my data: ', data);
     })
     
-  
-  }
-  pressedB():void{
-    console.log("B");
-    this.response = this.http.get('http://google.com');
-    //console.log(this.response);
+ }
+
+ start():void{
+    console.log("Start");
+    this.response = this.http.get();
     this.response
     .map(res => res.json())
     .subscribe(data => {
       console.log('my data: ', data);
     })
     
-  
-  }
-  pressedX():void{
-    console.log("X");
-    this.response = this.http.get('http://google.com');
-    //console.log(this.response);
-    this.response
-    .map(res => res.json())
-    .subscribe(data => {
-      console.log('my data: ', data);
-    })
-   }
-   pressedY():void{
-    console.log("Y");
-    this.response = this.http.get('http://google.com');
-    //console.log(this.response);
-    this.response
-    .map(res => res.json())
-    .subscribe(data => {
-      console.log('my data: ', data);
-    })
-    
-  
-  }
+ }
   pressedLeft():void{
     console.log("<-");
-    this.response = this.http.get('http://google.com');
+    this.response = this.http.get( "http://192.168.0.33:40314/left");
     //console.log(this.response);
     this.response
     .map(res => res.json())
@@ -75,7 +50,7 @@ export class AboutPage {
   }
   pressedRight():void{
     console.log("->");
-    this.response = this.http.get('http://google.com');
+    this.response = this.http.get( "http://192.168.0.33:40314/right");
     //console.log(this.response);
     this.response
     .map(res => res.json())
@@ -85,7 +60,7 @@ export class AboutPage {
    }
   pressedUp():void{
     console.log("^");
-    this.response = this.http.get('http://google.com');
+    this.response = this.http.get( "http://192.168.0.33:40314/up");
     //console.log(this.response);
     this.response
     .map(res => res.json())
@@ -97,7 +72,7 @@ export class AboutPage {
   }
   pressedDown():void{
     console.log("v");
-    this.response = this.http.get('http://google.com');
+    this.response = this.http.get("http://192.168.0.33:40314/down");
     //console.log(this.response);
     this.response
     .map(res => res.json())
@@ -107,6 +82,7 @@ export class AboutPage {
     
   
   }
+  
   }
 
 

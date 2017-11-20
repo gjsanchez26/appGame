@@ -14,7 +14,7 @@ export class HomePage {
  
   }
   connect():void{
-    console.log("Conneting with "+ this.ip+" on port "+this.port);
+    console.log("Conneting with "+ this.ip+ " on port "+this.port);
     
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
